@@ -4,7 +4,6 @@
 #include <iostream>
 #include <fstream>
 #include <vector>
-#include <cmath>
 
 constexpr	unsigned int	defaultNbPoints = 100;
 constexpr	float 			defaulttStop = 1;
@@ -19,8 +18,7 @@ class Signal{
 	private:
 	
 	virtual int		Compute()const = 0;
-	
-	
+		
 	protected:
 	// Internal stuff
 	mutable std::vector<float> tn;
@@ -34,8 +32,6 @@ class Signal{
 	
 	void	Refresh_dt()const;
 	mutable bool	needToCompute;
-	
-	Signal& operator=(const Signal&);
 	
 	public:
 	
